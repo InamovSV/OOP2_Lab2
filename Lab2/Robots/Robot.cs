@@ -9,16 +9,35 @@ namespace Lab2.Robots
 {
     abstract class Robot
     {
+
+        public Robot()
+        {
+            Pos = new Position();
+            _cargo = new List<Item>();
+        }
         double _charge;
         double _capacity;
         List<Item> _cargo;
         double _decodingFactor;
         readonly Player _owner;
         double _currentCapacity;
+        Position _pos;
 
         abstract public double MaxCharge { get; }
 
-        abstract public double Charge { get; set; }
+        public double Charge
+        {
+            get
+            {
+                return _charge;
+            }
+            set
+            {
+                if (value <= MaxCharge && value >= 0)
+                    _charge = value;
+                else throw new Exception();
+            }
+        }
 
         abstract public double MaxCapacity { get; }
 
@@ -29,11 +48,6 @@ namespace Lab2.Robots
             get
             {
                 return _cargo;
-            }
-
-            set
-            {
-                _cargo = value;
             }
         }
 
@@ -54,26 +68,60 @@ namespace Lab2.Robots
 
             set
             {
-                _currentCapacity = value;
+                if (value <= MaxCapacity && value > 0)
+                    _currentCapacity = value;
+                else throw new Exception("Over max capacity");
+            }
+        }
+
+        public Position Pos
+        {
+            get
+            {
+                return _pos;
+            }
+
+            set
+            {
+                _pos = value;
             }
         }
 
         public void SetMemento(INarrowMemento memento)
         {
             var mem = (RobotMemento)memento;
-            Charge = mem.Charge;
-            CurrentCapacity = mem.CurrentCapacity;
-            Cargo = mem.Cargo;
+            _charge = mem.Charge;
+            _currentCapacity = mem.CurrentCapacity;
+            _cargo = mem.Cargo;
+            _pos = mem.Pos;
         }
 
         public INarrowMemento CreateMemento()
         {
-            return new RobotMemento(Charge, CurrentCapacity, Cargo.Select(x => x.Copy()).ToList());
+            return new RobotMemento(_pos.Copy(), Charge, CurrentCapacity, Cargo.Select(x => x.Copy()).ToList());
         }
+
+        public abstract void TakeItem(Item item);
 
         public void Move(MoveSide side)
         {
-
+            switch (side)
+            {
+                case MoveSide.Up:
+                    --Pos.Y;
+                    break;
+                case MoveSide.Right:
+                    ++Pos.X;
+                    break;
+                case MoveSide.Down:
+                    ++Pos.Y;
+                    break;
+                case MoveSide.Left:
+                    --Pos.X;
+                    break;
+                default:
+                    break;
+            }
         }
 
         public ICommand GetMoveCommand(MoveSide side)
@@ -112,6 +160,23 @@ namespace Lab2.Robots
             Right,
             Down,
             Left
+        }
+
+        public class Position
+        {
+
+            public Position(int x = 0, int y = 0)
+            {
+                X = x;
+                Y = y;
+            }
+            public int X { get; set; }
+            public int Y { get; set; }
+
+            public Position Copy()
+            {
+                return new Position(X, Y);
+            }
         }
     }
 }

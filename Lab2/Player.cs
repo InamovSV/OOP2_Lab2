@@ -15,6 +15,17 @@ namespace Lab2
         string _legend;
         Robot _robot;
 
+        public Player()
+        {
+            
+        }
+
+        public Player(string name, string legend)
+        {
+            _name = name;
+            _legend = legend;
+        }
+
         public Bitmap Avatar
         {
             get
@@ -65,6 +76,28 @@ namespace Lab2
             {
                 _robot = value;
             }
+        }
+
+        public Robot CreateRobot()
+        {
+            int rand = new Random().Next(100);
+
+            if (rand >= 0 && rand < 20)
+            {
+                _robot = new Smart();
+                return _robot;
+            }
+            else if (rand >= 20 && rand < 50)
+            {
+                _robot = new Kiborg();
+                return _robot;
+            }
+            else
+            {
+                _robot = new Worker();
+                return _robot;
+            }
+
         }
     }
 }

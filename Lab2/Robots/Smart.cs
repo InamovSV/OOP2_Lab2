@@ -3,47 +3,52 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Lab2.Items;
 
 namespace Lab2.Robots
 {
     class Smart : Robot
     {
+        readonly double _maxCapacity;
+        readonly double _decodingFactor;
+        readonly double _maxCharge;
+
+        public Smart()
+        {
+            _maxCapacity = 500;
+            _maxCharge = 50;
+            _decodingFactor = 100;
+        }
+
         public override double MaxCapacity
         {
             get
             {
-                throw new NotImplementedException();
-            }
-        }
-
-        public override double Charge
-        {
-            get
-            {
-                throw new NotImplementedException();
+                return _maxCapacity;
             }
 
-            set
-            {
-                throw new NotImplementedException();
-            }
         }
+
 
         public override double DecodingFactor
         {
             get
             {
-                throw new NotImplementedException();
+                return _decodingFactor;
             }
-
         }
 
         public override double MaxCharge
         {
             get
             {
-                throw new NotImplementedException();
+                return _maxCharge;
             }
+        }
+
+        public override void TakeItem(Item item)
+        {
+            
         }
     }
 }

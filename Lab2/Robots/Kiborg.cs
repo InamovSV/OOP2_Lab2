@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Lab2.Items;
 
 namespace Lab2.Robots
 {
@@ -25,20 +26,9 @@ namespace Lab2.Robots
             {
                 return _maxCapacity;
             }
+
         }
 
-        public override double Charge
-        {
-            get
-            {
-                throw new NotImplementedException();
-            }
-
-            set
-            {
-                throw new NotImplementedException();
-            }
-        }
 
         public override double DecodingFactor
         {
@@ -54,6 +44,11 @@ namespace Lab2.Robots
             {
                 return _maxCharge;
             }
+        }
+
+        public override void TakeItem(Item item)
+        {
+            
         }
     }
 }

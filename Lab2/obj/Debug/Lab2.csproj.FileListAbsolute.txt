@@ -1,0 +1,6 @@
+D:\Projects\C#\OOP2\Lab2\Lab2\bin\Debug\Lab2.exe.config
+D:\Projects\C#\OOP2\Lab2\Lab2\bin\Debug\Lab2.exe
+D:\Projects\C#\OOP2\Lab2\Lab2\bin\Debug\Lab2.pdb
+D:\Projects\C#\OOP2\Lab2\Lab2\obj\Debug\Lab2.csprojResolveAssemblyReference.cache
+D:\Projects\C#\OOP2\Lab2\Lab2\obj\Debug\Lab2.exe
+D:\Projects\C#\OOP2\Lab2\Lab2\obj\Debug\Lab2.pdb

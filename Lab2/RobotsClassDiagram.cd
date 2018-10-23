@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Lab2.Player">
+    <Position X="2" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAIAAIAAAAAAAAAAQBAAQABAAAAAACAAAAAABAAAA=</HashCode>
+      <FileName>Player.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Robot" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Lab2.Robot">
+    <Position X="4.75" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAgACAAAQAAAAAAAEAAAQCAAAAAAABAAAAQAABCAA=</HashCode>
+      <FileName>Robot.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Owner" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Property Name="Cargo" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="Lab2.Item">
+    <Position X="2" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgABAAAAAQAAAAQAAAEAAAAAACCAAAAAAAQAAEAACAA=</HashCode>
+      <FileName>Item.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Lab2.Kiborg">
+    <Position X="6.75" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAQAAAAAAAEAAAACAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Kiborg.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Lab2.Smart" Collapsed="true">
+    <Position X="6.75" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAQAAAAAAAEAAAACAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Smart.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Lab2.Worker" Collapsed="true">
+    <Position X="6.75" Y="1.5" Width="1.5" />
+    <InheritanceLine Type="Lab2.Robot" FixedToPoint="true">
+      <Path>
+        <Point X="6.25" Y="1.875" />
+        <Point X="6.75" Y="1.875" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAQAAAAAAAEAAAACAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Worker.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

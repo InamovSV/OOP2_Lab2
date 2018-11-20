@@ -1,0 +1,7 @@
+D:\Projects\C#\OOP2\Lab2\Lab2Test\bin\Debug\Lab2Test.dll
+D:\Projects\C#\OOP2\Lab2\Lab2Test\bin\Debug\Lab2Test.pdb
+D:\Projects\C#\OOP2\Lab2\Lab2Test\bin\Debug\Lab2.exe
+D:\Projects\C#\OOP2\Lab2\Lab2Test\bin\Debug\Lab2.pdb
+D:\Projects\C#\OOP2\Lab2\Lab2Test\obj\Debug\Lab2Test.csprojResolveAssemblyReference.cache
+D:\Projects\C#\OOP2\Lab2\Lab2Test\obj\Debug\Lab2Test.dll
+D:\Projects\C#\OOP2\Lab2\Lab2Test\obj\Debug\Lab2Test.pdb

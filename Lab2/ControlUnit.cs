@@ -7,7 +7,7 @@ using Lab2.Robots;
 
 namespace Lab2
 {
-    class ControlUnit
+    public class ControlUnit
     {
         private List<ICommand> commands = new List<ICommand>();
         private int current = 0;

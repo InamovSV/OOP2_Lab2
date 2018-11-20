@@ -46,13 +46,18 @@
   <ItemGroup>
     <Compile Include="ControlUnit.cs" />
     <Compile Include="Game.cs" />
+    <Compile Include="GameMemento.cs" />
+    <Compile Include="INarrowGameMemento.cs" />
+    <Compile Include="Items\Bomb.cs" />
     <Compile Include="Items\CodedItem.cs" />
     <Compile Include="Items\Item.cs" />
     <Compile Include="Items\ItemDecorator.cs" />
+    <Compile Include="Items\ItemGenerator.cs" />
     <Compile Include="Items\SpoilableItem.cs" />
     <Compile Include="Items\ToxicItem.cs" />
+    <Compile Include="Position.cs" />
     <Compile Include="Robots\ICommand.cs" />
-    <Compile Include="Robots\INarrowMemento.cs" />
+    <Compile Include="Robots\INarrowRobotMemento.cs" />
     <Compile Include="Robots\Kiborg.cs" />
     <Compile Include="Player.cs" />
     <Compile Include="Program.cs" />

@@ -7,17 +7,18 @@ using Lab2.Items;
 
 namespace Lab2.Robots
 {
-    class Smart : Robot
+    public class Smart : Robot
     {
         readonly double _maxCapacity;
-        readonly double _decodingFactor;
+        readonly int _decodingFactor;
         readonly double _maxCharge;
 
         public Smart()
         {
-            _maxCapacity = 500;
+            _maxCapacity = 200;
             _maxCharge = 50;
             _decodingFactor = 100;
+            Charge = MaxCharge;
         }
 
         public override double MaxCapacity
@@ -30,7 +31,7 @@ namespace Lab2.Robots
         }
 
 
-        public override double DecodingFactor
+        public override int DecodingFactor
         {
             get
             {
@@ -46,9 +47,15 @@ namespace Lab2.Robots
             }
         }
 
-        public override void TakeItem(Item item)
+        public override string ToString()
         {
-            
+            var items = new StringBuilder();
+            foreach (var item in Cargo)
+            {
+                items.Append("\t" + item.ToString() + "\n");
+            }
+            return "Smart\n\tCargo: " + items.ToString();
         }
+
     }
 }

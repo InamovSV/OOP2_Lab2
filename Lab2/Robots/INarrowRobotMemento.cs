@@ -6,9 +6,7 @@ using System.Threading.Tasks;
 
 namespace Lab2.Robots
 {
-    public interface ICommand
+    public interface INarrowRobotMemento
     {
-        void Execute();
-        void UnExecute();
     }
 }

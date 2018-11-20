@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Lab2.Robots;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Lab2.Items
 {
-    abstract class Item
+    public abstract class Item
     {
         public Item(double weight, double price)
         {
@@ -43,6 +44,27 @@ namespace Lab2.Items
             }
         }
 
+        public abstract string GetName();
+
+        public abstract bool Influence(Robot robot, Item item = null);
+
+        public Position Pos { get; set; }
+
         public abstract Item Copy();
+
+        public abstract char GetSymbol();
+
+        public override int GetHashCode()
+        {
+            return base.GetHashCode();
+        }
+
+        public override bool Equals(object obj)
+        {
+            var item = obj as Item;
+            if (item != null)
+                return Pos == item.Pos && Price == item.Price && Weight == item.Weight;
+            else return false;
+        }
     }
 }

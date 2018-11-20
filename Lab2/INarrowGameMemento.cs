@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Lab2.Robots
+namespace Lab2
 {
-    interface INarrowMemento
+    public interface INarrowGameMemento
     {
     }
 }

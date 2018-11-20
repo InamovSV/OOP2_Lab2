@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace Lab2.Robots
 {
-    class RobotCaretaker
+    public class RobotCaretaker
     {
-        public INarrowMemento Memento { get; set; }
+        public INarrowRobotMemento Memento { get; set; }
     }
 }

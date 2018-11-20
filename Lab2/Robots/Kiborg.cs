@@ -7,17 +7,36 @@ using Lab2.Items;
 
 namespace Lab2.Robots
 {
-    class Kiborg : Robot
+    public class Kiborg : Robot
     {
         readonly double _maxCapacity;
-        readonly double _decodingFactor;
+        readonly int _decodingFactor;
         readonly double _maxCharge;
+        readonly Random rand;
 
         public Kiborg()
         {
-            _maxCapacity = 700;
+            _maxCapacity = 300;
             _maxCharge = 75;
             _decodingFactor = 60;
+            Charge = MaxCharge;
+            rand = new Random();
+        }
+
+        public override double Charge
+        {
+            get
+            {
+                return base.Charge;
+            }
+
+            set
+            {
+                if (CurrentCapacity > MaxCapacity * 0.75 && rand.Next(100) < 25)
+                    base.Charge = value*2;
+                else
+                    base.Charge = value;
+            }
         }
 
         public override double MaxCapacity
@@ -26,11 +45,10 @@ namespace Lab2.Robots
             {
                 return _maxCapacity;
             }
-
         }
 
 
-        public override double DecodingFactor
+        public override int DecodingFactor
         {
             get
             {
@@ -46,9 +64,5 @@ namespace Lab2.Robots
             }
         }
 
-        public override void TakeItem(Item item)
-        {
-            
-        }
     }
 }

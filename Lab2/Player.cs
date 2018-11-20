@@ -8,7 +8,7 @@ using Lab2.Robots;
 
 namespace Lab2
 {
-    class Player
+    public class Player
     {
         Bitmap _avatar;
         string _name;
